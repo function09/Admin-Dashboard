@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: none;
+}
+
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+}
+
+/* Sidebar */
+.sideBar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.headingLogo {
+    align-self: center;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 35px;
+    align-self: center;
+}
+
+li {
+    list-style-type: none;
+    margin:15px;
+}
+
+/* Header */
+
+
+
+/*Main Content
