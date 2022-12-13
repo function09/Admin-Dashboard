@@ -15,6 +15,7 @@
 }
 
 /* Sidebar */
+
 .sideBar {
     grid-area: sidebar;
     display: flex;
@@ -41,6 +42,27 @@ li {
 
 /* Header */
 
+.header {
+    grid-area: header;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "searchbar name"
+    "welcome buttons";
+}
 
+input {
+    grid-area: searchbar;
+}
 
-/*Main Content
+.name {
+    grid-area: name;
+}
+
+.welcomeMessage, .userInfo {
+    grid-area: welcome;
+}
+
+/* Main Content */
+
