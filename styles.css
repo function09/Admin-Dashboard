@@ -11,7 +11,7 @@
     grid-template-rows: 100px 1fr;
     grid-template-areas:
     "sidebar header"
-    "sidebar main"
+    "sidebar main";
 }
 
 /* Sidebar */
@@ -46,7 +46,7 @@ li {
     grid-area: header;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1.4fr);
     grid-template-areas: 
     "searchbar name"
     "welcome buttons";
@@ -54,6 +54,7 @@ li {
 
 input {
     grid-area: searchbar;
+    height: 15px;
 }
 
 .name {
@@ -66,3 +67,92 @@ input {
 
 /* Main Content */
 
+.mainContent {
+    grid-area: main;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr) 0.7fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "card1 card2 announcements"
+    "card3 card4 announcements"
+    "card5 card6 announcements";
+    justify-items: start;
+    align-items: center;
+}
+
+.card1,.card2,
+.card3, .card4,
+.card5, .card6 {
+    height: 80%;
+    width: 70%;   
+}
+
+.card1 {
+   grid-area: card1;
+   display:grid;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.announcementsAndTrending {
+    grid-area: announcements;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "announcements"
+    "trending";
+}
+
+.announcements {
+    grid-area: announcements;
+    height: 80%;
+    width: 70%;
+    align-self: start;
+    justify-self: start;
+    margin-top: 25px;
+}
+
+.trending {
+    grid-area: trending;
+    height: 80%;
+    width: 70%;
+    align-self: start;
+    justify-self: start;
+    margin-top: 60px;
+}
+
+.announcementsTitle {
+    grid-area: announcements;
+}
+
+.trendingTitle {
+    grid-area: trending;
+    margin-top: 35px;
+}
+
+.projectsTitle {
+    grid-area: card1;
+    align-self: start;
+    margin-bottom: 15px;
+}
