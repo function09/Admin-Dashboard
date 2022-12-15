@@ -145,12 +145,17 @@ input {
 
 .trending {
     grid-area: trending;
-    height: 80%;
-    width: 70%;
+    height: 70%;
+    width: 60%;
     align-self: start;
     justify-self: start;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     margin-top: 60px;
     border: 1px solid red;
+    padding: 20px;
 }
 
 .announcementsTitle {
