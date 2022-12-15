@@ -8,7 +8,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: 150px 1fr;
     grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -46,7 +46,7 @@ li {
     grid-area: header;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1.4fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-template-areas: 
     "searchbar name"
     "welcome buttons";
@@ -84,12 +84,16 @@ input {
 .card3, .card4,
 .card5, .card6 {
     height: 80%;
-    width: 70%;   
+    width: 65%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid red;
 }
 
 .card1 {
    grid-area: card1;
-   display:grid;
 }
 
 .card2 {
@@ -127,10 +131,16 @@ input {
 .announcements {
     grid-area: announcements;
     height: 80%;
-    width: 70%;
+    width: 60%;
     align-self: start;
     justify-self: start;
     margin-top: 25px;
+    border: 1px solid red;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .trending {
@@ -140,6 +150,7 @@ input {
     align-self: start;
     justify-self: start;
     margin-top: 60px;
+    border: 1px solid red;
 }
 
 .announcementsTitle {
@@ -155,4 +166,39 @@ input {
     grid-area: card1;
     align-self: start;
     margin-bottom: 15px;
+}
+
+.cardTextContainer {
+    margin-bottom: 45px;
+    padding: 20px;
+}
+
+.announcementContainerTop,
+.announcementContainerBottom,
+.announcementContainerMiddle {
+    padding: 15px;
+}
+
+.announcementContainerMiddle {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.announcementContainerBottom {
+    padding: 15px;
+}
+
+.trendingContainerTop,
+.trendingContainerBottom,
+.trendingContainerMiddle {
+    padding: 15px;
+}
+
+.trendingContainerMiddle {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.trendingContainerBottom {
+    padding: 15px;
 }
