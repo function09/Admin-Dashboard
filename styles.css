@@ -21,10 +21,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 
 .headingLogo {
     align-self: center;
+    font-size: 2em;
 }
 
 .navBar {
@@ -48,7 +51,7 @@ img{
 
 li {
     list-style-type: none;
-    margin:15px;
+    margin:20px;
 }
 
 a {
@@ -106,7 +109,6 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    border: 1px solid red;
 }
 
 .card1 {
@@ -152,7 +154,6 @@ input {
     align-self: start;
     justify-self: start;
     margin-top: 25px;
-    border: 1px solid red;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -171,7 +172,6 @@ input {
     justify-content: center;
     align-items: flex-start;
     margin-top: 60px;
-    border: 1px solid red;
     padding: 20px;
 }
 
