@@ -8,7 +8,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 200px 1fr;
     grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -70,6 +70,7 @@ a {
     grid-template-areas: 
     "searchbar name"
     "welcome buttons";
+    font-family: 'Open Sans', sans-serif,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .searchContainer {
@@ -93,8 +94,9 @@ input {
 
 .nameContainer {
     display: flex;
-    gap: 50px;
+    gap: 35px;
     height: 25px;
+    width: 500px;
     justify-content: end;
     margin-top: 25px;
     margin-right: 75px;
@@ -120,7 +122,13 @@ button {
 .name {
     grid-area: name;
     font-size: 1.5em;
+    font-weight: bold;
 }
+
+.nameContainer > img {
+    margin-top: 5px;
+}
+
 .welcomeMessage, .userInfo {
     grid-area: welcome;
 }
@@ -136,6 +144,10 @@ button {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 25px;
+}
+
+.userInfoName {
+    font-weight: bold;
 }
 
 /* Main Content */
@@ -162,6 +174,44 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card1, .card3, .card5 {
+    margin-left: 25px;
+}
+
+.cardTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.iconContainer {
+    width: 25px;
+    align-self: flex-end;
+    display: flex;
+    gap: 45px;
+    margin-right: 155px;
+    margin-bottom: 25px;
+}
+
+.cardTitle, .cardText {
+    font-family: 'Open Sans', sans-serif,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1em;
+}
+
+.cardTitle {
+    font-weight: bold;
+}
+
+.projectsTitle, .announcementsTitle, 
+.trendingTitle {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .card1 {
@@ -202,30 +252,39 @@ button {
 
 .announcements {
     grid-area: announcements;
-    height: 80%;
+    height: 70%;
     width: 60%;
-    align-self: start;
+    align-self: center;
     justify-self: start;
     margin-top: 25px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20px;
+    padding: 35px;
+    font-family: 'Open Sans', sans-serif,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .trending {
     grid-area: trending;
     height: 70%;
     width: 60%;
-    align-self: start;
+    align-self: center;
     justify-self: start;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 60px;
-    padding: 20px;
+    padding: 35px;
+    margin-top: 40px;
+    font-family: 'Open Sans', sans-serif,system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.announcements, .trending {
+    border-radius: 12px;
+    
 }
 
 .announcementsTitle {
@@ -234,13 +293,18 @@ button {
 
 .trendingTitle {
     grid-area: trending;
-    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.announcementHeader, .trendingHeader {
+    font-weight: bold;
 }
 
 .projectsTitle {
     grid-area: card1;
     align-self: start;
     margin-bottom: 15px;
+    margin-left: 25px;
 }
 
 .cardTextContainer {
@@ -271,7 +335,6 @@ button {
 
 .trendingContainerMiddle {
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
 }
 
 .trendingContainerBottom {
